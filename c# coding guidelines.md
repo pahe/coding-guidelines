@@ -173,8 +173,13 @@ var result = await GetDataAsync(); // Bra
 ```csharp
 await _httpClient.SendAsync(request).ConfigureAwait(false);
 ```
+Bibliotek bör inte anta någon specifik synkroniseringskontext.
+`ConfigureAwait(false)` låter fortsättningen ske på valfri tråd och minskar risken för deadlocks.
+Mer läsning:
+- [ConfigureAwait FAQ](https://devblogs.microsoft.com/dotnet/configureawait-faq/)
+- [Asynchronous programming with async and await](https://learn.microsoft.com/dotnet/csharp/programming-guide/concepts/async/)
 
-### 4.6 Parallellisering  
+### 4.6 Parallellisering
 ```csharp
 await Task.WhenAll(method1Async(), method2Async());
 ```
