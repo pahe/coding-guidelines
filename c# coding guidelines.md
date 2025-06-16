@@ -125,9 +125,20 @@ Används endast när:
 ---
 
 ### 2.10 Tomma rader mellan properties
- - Sätt en tom rad mellan varje property för tydlighetens skull.
+- Sätt en tom rad mellan varje property för tydlighetens skull.
+- Undantag: Om hela klassen enbart består av autoimplementerade getters och setters kan properties placeras direkt efter varandra utan tom rad emellan.
 
-Undantag: Om hela klassen enbart består av autoimplementerade getters och setters kan properties placeras direkt efter varandra utan tom rad emellan.
+**Ej så här:**
+```csharp
+public DateTime Birthdate { get; set; }
+public Gender Gender { get; set; }
+```
+
+**Okej i klasser som enbart består av autoimplementerade properties:**
+```csharp
+public int Id { get; set; }
+public string Name { get; set; }
+```
 
 ---
 
