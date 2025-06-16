@@ -141,6 +141,23 @@ public string Name { get; set; }
 ```
 
 ---
+### 2.11 Klamrar runt kontrollflöde
+
+- Använd alltid klamrar `{}` för `if`, `else`, `for`, `while` m.m., även när blocket bara innehåller en rad.
+
+```csharp
+// Fel
+if (isReady)
+    Run();
+
+// Rätt
+if (isReady)
+{
+    Run();
+}
+```
+
+---
 
 ## Kapitel 3: Felhantering & Undantag
 
