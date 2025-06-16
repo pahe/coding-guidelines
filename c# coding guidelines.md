@@ -130,6 +130,23 @@ Används endast när:
 Undantag: Om hela klassen enbart består av autoimplementerade getters och setters kan properties placeras direkt efter varandra utan tom rad emellan.
 
 ---
+### 2.11 Klamrar runt kontrollflöde
+
+- Använd alltid klamrar `{}` för `if`, `else`, `for`, `while` m.m., även när blocket bara innehåller en rad.
+
+```csharp
+// Fel
+if (isReady)
+    Run();
+
+// Rätt
+if (isReady)
+{
+    Run();
+}
+```
+
+---
 
 ## Kapitel 3: Felhantering & Undantag
 
