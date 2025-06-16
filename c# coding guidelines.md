@@ -124,6 +124,13 @@ Används endast när:
 
 ---
 
+### 2.10 Tomma rader mellan properties
+ - Sätt en tom rad mellan varje property för tydlighetens skull.
+
+Undantag: Om hela klassen enbart består av autoimplementerade getters och setters kan properties placeras direkt efter varandra utan tom rad emellan.
+
+---
+
 ## Kapitel 3: Felhantering & Undantag
 
 En bra strategi för felhantering bör vara:
